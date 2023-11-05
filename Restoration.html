@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Restoration - Choose Algorithm</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="ImageRestoration.css">
+    <link rel="stylesheet" href="toggle.css">
+    <script src="toggle.js"></script>
+</head>
+<body>
+    <!--
+    <header>
+        <nav>
+            <div class="menu-container">
+               
+                <div class="menu-toggle" onclick="toggleMenu()">
+                    <div class="menu-icon">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+                
+                <div class="menu">
+                    <ul class="menu-items">
+                        <li><a href="LoginPage.html">Login</a></li>
+                        <li><a href="Index.html">Home</a></li>
+                        <li><a href="Restoration.html">Restoration</a></li>
+                        <li><a href="ContactUs.html">Contact Us</a></li>
+                        <li><a href="AboutUs.html">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+        -->
+        <header>
+            <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <a class="menu-item" href="LoginPage.html">Login</a>
+                <a class="menu-item" href="Index.html">Home</a>
+                <a class="menu-item" href="Restoration.html">Restoration</a>
+                <a class="menu-item" href="ContactUs.html">Contact Us</a>
+                <a class="menu-item" href="AboutUs.html">About Us</a>
+              </div>
+              
+              <div id="main">
+                <button class="openbtn" onclick="toggleNav()">☰</button> 
+              </div>
+        </header>
+        
+    <h1>Image Restoration</h1>
+    <p>Choose an algorithm for image restoration:</p>
+    
+    <form action="restoration_process.html" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="algorithm" value="{{ request.args['algorithm'] }}">
+        <input type="file" name="image">
+        <br>
+        <input type="submit" value="Upload Image">
+    </form>
+</body>
+</html>

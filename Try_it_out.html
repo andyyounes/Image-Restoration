@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Restoration</title>
+</head>
+<body>
+    <h1>Image Restoration Tool</h1>
+    <p>Select a restoration algorithm:</p>
+    
+    <form action="restoration.html" method="post" enctype="multipart/form-data">
+        <label for="algorithm">Select a restoration algorithm:</label>
+        <select name="algorithm" id="algorithm">
+            <option value="denoising">Denoising</option>
+            <option value="deblurring">Deblurring</option>
+            <option value="inpainting">Inpainting</option>
+        </select>
+    
+        <label for="image">Upload your image:</label>
+        <input type="file" name="image" id="image">
+    
+        <input type="submit" value="Try It Out">
+    </form>
+    
+</body>
+</html>

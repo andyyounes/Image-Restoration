@@ -1,0 +1,136 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set the background color for the body */
+body {
+    background-color: #eeeeee; /* Light Gray */
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    margin-left:50px;
+    margin-right:50px;
+    width: 100vw;
+    /* display: flex;
+    flex-direction:column;
+    align-items: center; */
+}
+
+/* Style the header and navigation menu */
+header {
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: hsl(290, 59%, 66%); /* Dark Gray */
+    font-weight: bold;
+}
+
+/* Style the content container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style headings */
+h1, h2 {
+    color: #333; /* Dark Gray */
+   text-align: left !important;
+}
+
+/* Style paragraphs */
+p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+
+/* Style links */
+a {
+    text-decoration: none;
+    color: #333; /* Dark Gray */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Additional Colors */
+.light-pink {
+    background-color: #FFC0CB; /* Light Pink */
+}
+
+.light-yellow {
+    background-color: #FFFFE0; /* Light Yellow */
+}
+
+.light-gray {
+    background-color: #D3D3D3; /* Light Gray */
+}
+.try-it-out-button {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.try-it-out-link {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--light-text);
+    background-color: var(--dark-green);
+}
+
+.try-it-out-link.pink {
+    background-color: var(--light-pink);
+}
+
+.im{
+    width: 30%;
+}
+.im img{
+    width: 100%;
+}
+
+/* Styles for images and text div */
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.image-container .image-box {
+    width: 30%; /* Adjust the width as needed */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.image-container .image-box img {
+    width: 100%; /* Make the images fill the container */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.image-container .image-box p {
+    margin-top: 10px;
+}
+

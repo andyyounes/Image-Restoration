@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    
+        <meta charset="UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="ImageRestoration.css">
+        <link rel="stylesheet" href="toggle.css">
+        <link rel="stylesheet" href="sign-up.css">
+        <script src="toggle.js"></script>
+
+</head>
+<body>
+    <header>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a class="menu-item" href="LoginPage.html">Login</a>
+            <a class="menu-item" href="Index.html">Home</a>
+            <a class="menu-item" href="Restoration.html">Restoration</a>
+            <a class="menu-item" href="ContactUs.html">Contact Us</a>
+            <a class="menu-item" href="AboutUs.html">About Us</a>
+          </div>
+          
+          <div id="main">
+            <button class="openbtn" onclick="toggleNav()">☰</button> 
+          </div>
+          <h1> Sign Up </h1>
+          
+    </header>  
+        
+    
+    <div class="signup-container">
+      <form class="signup-form" action="signup-process.php" method="POST">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+          
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+          
+          <button type="submit">Sign Up</button>
+      </form>
+  </div>
+  
+
+
+  </body>   
