@@ -6,47 +6,70 @@
         <meta charset="UTF-8">
         
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-        <link rel="stylesheet" href="ImageRestoration.css">
-        <link rel="stylesheet" href="toggle.css">
-        <link rel="stylesheet" href="sign-up.css">
+        <link rel="stylesheet" href="Imagerestoration.css">
+        <!-- <link rel="stylesheet" href="sign-up.css"> -->
         <script src="toggle.js"></script>
-
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Quicksand:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div id="mySidebar" class="sidebar">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-            <a class="menu-item" href="LoginPage.html">Login</a>
+            <a class="menu-item" href="Main.html">Main</a>
             <a class="menu-item" href="Index.html">Home</a>
             <a class="menu-item" href="Restoration.html">Restoration</a>
             <a class="menu-item" href="ContactUs.html">Contact Us</a>
             <a class="menu-item" href="AboutUs.html">About Us</a>
           </div>
           
-          <div id="main">
+          <div id="main" class="header-left">
             <button class="openbtn" onclick="toggleNav()">☰</button> 
+            <img src="./scnd-removebg-preview.png" alt="logo" class="header-logoim" id="logo">
           </div>
-          <h1> Sign Up </h1>
+          <div class="header-right">
+            <button onclick="switchMode()" class="night-mode-button">
+                <img id="moonIcon" src="./[removal.ai]_bcf90bd8-63d7-49dc-8ef8-52aaf482491f_night2.png" alt="Moon Icon" class="moon-icon">
+            </button>
+            <button class="login-button" onclick="goToLoginPage()"><b>Login</b></button>
+          </div>
+          
           
     </header>  
-        
-    
-    <div class="signup-container">
-      <form class="signup-form" action="signup-process.php" method="POST">
-          <label for="username">Username:</label>
-          <input type="text" id="username" name="username" required>
-          
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-          
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password" required>
-          
-          <button type="submit">Sign Up</button>
-      </form>
+    <div class="container3">
+      <h1>Sign Up</h1>
+      <div class="form-container">
+          <form action="signup-process.php" method="post">
+              <div class="label-container">
+                  <label for="username">Username:</label>
+              </div>
+              <div class="input-container">
+                  <input type="text" id="username" name="username" required>
+              </div>
+              
+              <div class="label-container">
+                  <label for="email">Email:</label>
+              </div>
+              <div class="input-container">
+                  <input type="email" id="email" name="email" required>
+              </div>
+              
+              <div class="label-container">
+                  <label for="password">Password:</label>
+              </div>
+              <div class="input-container">
+                  <input type="password" id="password" name="password" minlength="8" required>
+              </div>
+              <div class="label-container">
+                <label for="confirm-password">Confirm Password:</label>
+              </div>
+              <div class="input-container">
+                <input type="password" id="confirm-password" name="password" minlength="8" required>
+              </div>
+              <div class="input-container">
+                  <input type="submit" class="input-submit" value="Sign up">
+              </div>
+          </form>
+      </div>
   </div>
-  
-
 
   </body>   
