@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content=""width=device-width, initial scale="1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="ImageRestoration.css">
-    <link rel="stylesheet" href="toggle.css">
     <script src="toggle.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Quicksand:wght@300&display=swap" rel="stylesheet">
 </head>
 
 
@@ -17,23 +15,27 @@
 
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a class="menu-item" href="LoginPage.html">Login</a>
+        <a class="menu-item" href="Main.html">Main</a>
         <a class="menu-item" href="Index.html">Home</a>
         <a class="menu-item" href="Restoration.html">Restoration</a>
         <a class="menu-item" href="ContactUs.html">Contact Us</a>
         <a class="menu-item" href="AboutUs.html">About Us</a>
       </div>
       
-      <div id="main">
+      <div id="main" class="header-left">
         <button class="openbtn" onclick="toggleNav()">☰</button> 
+        <img src="./scnd-removebg-preview.png" alt="logo" class="header-logoim" id="logo">
       </div>
-      <!--
-      <div class="container" onclick="toggleSidepanel(this)">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </div> -->
+      <div class="header-right">
+        <button onclick="switchMode()" class="night-mode-button">
+            <img id="moonIcon" src="./[removal.ai]_bcf90bd8-63d7-49dc-8ef8-52aaf482491f_night2.png" alt="Moon Icon" class="moon-icon">
+        </button>
+        <button class="login-button" onclick="goToLoginPage()"><b>Login</b></button>
+        <button class="subscribe-button" onclick="goToSubscribePage()"><b>Subscribe</b></button>
+      </div>
+     
     </header>  
+    <main >
         <h1> Introduction </h1>
         <p>
             Our project focuses on the development of a cutting-edge machine learning algorithm designed to restore damaged images.
@@ -45,9 +47,9 @@
             Through this project, we aim to provide an effective and efficient solution for image restoration, 
             enhancing the quality and usability of digital images across various applications, from photography to medical imaging.
         </p>
-
+        <br>
         <h1> Examples </h1>
-        <h2> <b> 1.  Removing Noise from a Vintage Photograph </b></h2>
+        <h2> 1.  Removing Noise from a Vintage Photograph </h2>
         <p>
             <i> Description:</i><br>
                 Imagine a vintage photograph taken decades ago, capturing a precious moment in time. Over the years, the photograph may have suffered from wear and tear, resulting in visible noise and imperfections. Our image restoration algorithm can effectively remove such noise and enhance the image, bringing back its original charm.<br>
@@ -61,6 +63,7 @@
 
             </p>
         </p>
+        <br>
         <h2> <b> 2. Image Inpainting </b></h2>
             <p>
                 <i>Description: <br></i>
@@ -72,7 +75,7 @@
                 <div class="im">
                     <img src="./Restoration2.jpg">
                 </div>
-                <br><br> we have two types of images: <br>
+                <br><br> We have two types of images: <br>
                 1. Damaged<br>
                 2. Masked<br>
                 A masked image has the same spatial dimensions of the noise which exists in the noisy image.<br>
@@ -80,7 +83,7 @@
                 <div class="image-container">
                     <div class="image-box">
                         <img src="./restoration3.jpg" alt="Image 1">
-                        <br><br><p> Noisy Image <br></p>
+                        <br><p> Noisy Image <br></p>
                     </div>
                     <div class="image-box">
                         <img src="./restoration4.jpg" alt="Image 2">
@@ -94,41 +97,41 @@
                 </div>
 
                
-                <br><br> The biggest problem with OpenCV’s image inpainting is that we need to manually input a mask for the specific image we want to fix. So how can we automate this process?
+                <br> The biggest problem with OpenCV’s image inpainting is that we need to manually input a mask for the specific image we want to fix. So how can we automate this process?
 
                 The answer is GAN (General Adversarial Network). This paper proposes that, by using a GAN network, image inpainting can be done using neighborhood loss function and gradient loss with a better quality restored image.  <br>
             </p>
-            
+        <br>    
         <h2><b> 3. Pixelation </b></h2>
         <p>
             Pixelation is a visual effect or image processing technique where an image is displayed or modified in such a way that individual pixels, which are the smallest units of an image, become clearly visible. This results in a blocky, low-resolution appearance, as opposed to a smooth and detailed one.
             <br>
             Here's a more detailed explanation of pixelation:
             <br>
-            1. <b>Pixel:</b><br> A pixel, short for "picture element," is the smallest unit of a digital image. It is a tiny square or dot that represents a single color. When you look closely at a digital image, you can see individual pixels.
+            a. <b>Pixel:</b><br> A pixel, short for "picture element," is the smallest unit of a digital image. It is a tiny square or dot that represents a single color. When you look closely at a digital image, you can see individual pixels.
             <br><br>
-            2. <b>Causes of Pixelation:</b><br>
+            b. <b>Causes of Pixelation:</b><br>
             - <b>Zooming In:</b> When you zoom in on a digital image, the individual pixels become more prominent. This is especially noticeable if the image has a low resolution to begin with. <br>
             - <b>Resizing:</b> Enlarging a small image can lead to pixelation because you are stretching the available pixels, causing a loss of detail.<br>
             - <b>Mosaic Effect:</b> In image editing software, the pixelation effect can be intentionally applied to an image as a creative or privacy measure. This is often referred to as the "mosaic" effect.<br>
             <br>
-            3. <b>Creative Uses:</b><br>
+            c. <b>Creative Uses:</b><br>
             - <b>Pixel Art:</b> Pixelation is intentionally used in a style of digital art called "pixel art." In pixel art, images are created by hand-placing individual pixels to form detailed and often retro-style artwork.<br>
             - <b>Video Games</b> Many classic video games used pixel art as a design choice due to the limited graphical capabilities of older gaming systems.<br>
             <br>
-            4.<b>Privacy and Censorship:</b> <br> Pixelation is sometimes used for privacy reasons, such as blurring faces or obscuring sensitive information in images or videos. This is often done to maintain anonymity.<br>
+            d.<b>Privacy and Censorship:</b> <br> Pixelation is sometimes used for privacy reasons, such as blurring faces or obscuring sensitive information in images or videos. This is often done to maintain anonymity.<br>
             <br>
-            5. <b>Digital Forensics:</b><br> In forensic investigations, pixelation can be used to protect the identities of individuals in images while preserving the rest of the visual data.<br>
+            e. <b>Digital Forensics:</b><br> In forensic investigations, pixelation can be used to protect the identities of individuals in images while preserving the rest of the visual data.<br>
             <br>
-            6. <b>Image Processing:</b><br> In image processing and computer vision, pixelation can be a side effect of certain operations like image compression and resizing. It can also be a technique used for image concealment.<br>
+            f. <b>Image Processing:</b><br> In image processing and computer vision, pixelation can be a side effect of certain operations like image compression and resizing. It can also be a technique used for image concealment.<br>
             <br>
-            7. <b>Anti-Aliasing:</b><br> Anti-aliasing is a technique used to reduce pixelation and smooth out jagged edges in digital images, making them appear less blocky and more visually appealing. It works by blending colors at the edges of objects to create a smoother transition between pixels.
+            g. <b>Anti-Aliasing:</b><br> Anti-aliasing is a technique used to reduce pixelation and smooth out jagged edges in digital images, making them appear less blocky and more visually appealing. It works by blending colors at the edges of objects to create a smoother transition between pixels.
             <br><br>
-            8. <b>Resolution:</b><br> The level of pixelation in an image is often associated with its resolution. Higher resolution images have more pixels per unit area and thus appear smoother, while lower resolution images have fewer pixels and can exhibit more obvious pixelation.
+            h. <b>Resolution:</b><br> The level of pixelation in an image is often associated with its resolution. Higher resolution images have more pixels per unit area and thus appear smoother, while lower resolution images have fewer pixels and can exhibit more obvious pixelation.
             <br> <br>
             In summary, pixelation is a visual effect characterized by the display or modification of an image at a low resolution, causing individual pixels to become visible. It can be both an unintentional side effect and an intentional creative or privacy measure in digital imagery.
         </p>
-
+        <br>
         <h1> Machine Learning algorithms for restoring images </h1>
         <p>
                 There are several machine learning algorithms and techniques used for restoring and enhancing images. These algorithms are commonly used in image processing tasks to remove noise, increase resolution, improve quality, and restore damaged or degraded images. Here are some popular machine learning algorithms and methods for image restoration:<br> <br>
@@ -163,8 +166,8 @@
 
         The choice of algorithm depends on the specific image restoration task and the nature of the images you're working with. Different algorithms may perform better in different scenarios. It's common to experiment with multiple methods to determine which one works best for your particular application. <br>
         </p>
-
-        <h1> Process </h1>
+        <br>
+        <h2> Process </h2>
         <p> 
            
             <h3><b><u>Step 1: Image Acquisition</u></b></h3>
@@ -180,7 +183,7 @@
             - <b>Missing Data (Inpainting):</b> Areas of the image might be missing or corrupted, and they need to be filled in.<br>
                 <br>
             Mathematically modeling these degradation processes is essential to develop effective restoration methods.<br>
-            <br><br>
+            <br>
             <h3><b><u>Step 3: Restoration Algorithm</u></b></h3>
 
             Image restoration algorithms aim to reverse the effects of degradation by applying mathematical operations to the degraded image. The specific algorithm chosen depends on the type and extent of degradation. Common restoration tasks include:
@@ -197,7 +200,7 @@
             <br>
             - <b>Resizing:</b> Adjusting the image size if needed. <br>
             - <b>Normalization:</b> Scaling pixel values to a standard range, such as [0, 1] or [-1, 1]. <br>
-            <br><br>
+            <br>
             <h3><b><u>Step 5: Application of the Restoration Algorithm</u></b></h3>
             The restoration algorithm is applied to the degraded image to produce a restored image. Depending on the algorithm, this process can involve mathematical operations, filtering, convolution, or deep learning computations.
             <br><br>
@@ -228,7 +231,7 @@
         <div class="try-it-out-button">
             <a href="Restoration.html" class="try-it-out-link">Try It Out</a>
         </div>
-        
+    </main>
        
     </body>
     
