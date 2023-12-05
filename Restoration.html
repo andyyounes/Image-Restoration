@@ -6,59 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="ImageRestoration.css">
-    <link rel="stylesheet" href="toggle.css">
     <script src="toggle.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Quicksand:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!--
-    <header>
-        <nav>
-            <div class="menu-container">
-               
-                <div class="menu-toggle" onclick="toggleMenu()">
-                    <div class="menu-icon">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                    </div>
-                </div>
-                
-                <div class="menu">
-                    <ul class="menu-items">
-                        <li><a href="LoginPage.html">Login</a></li>
-                        <li><a href="Index.html">Home</a></li>
-                        <li><a href="Restoration.html">Restoration</a></li>
-                        <li><a href="ContactUs.html">Contact Us</a></li>
-                        <li><a href="AboutUs.html">About Us</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-        -->
+  
         <header>
             <div id="mySidebar" class="sidebar">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                <a class="menu-item" href="LoginPage.html">Login</a>
+                <a class="menu-item" href="Main.html">Main</a>
                 <a class="menu-item" href="Index.html">Home</a>
                 <a class="menu-item" href="Restoration.html">Restoration</a>
                 <a class="menu-item" href="ContactUs.html">Contact Us</a>
                 <a class="menu-item" href="AboutUs.html">About Us</a>
               </div>
               
-              <div id="main">
+              <div id="main" class="header-left">
                 <button class="openbtn" onclick="toggleNav()">☰</button> 
+                <img src="./scnd-removebg-preview.png" alt="logo" class="header-logoim" id="logo">
+            </div>
+              <div class="header-right">
+                <button onclick="switchMode()" class="night-mode-button">
+                  <img id="moonIcon" src="./[removal.ai]_bcf90bd8-63d7-49dc-8ef8-52aaf482491f_night2.png" alt="Moon Icon" class="moon-icon">
+              </button>
+                <button class="login-button" onclick="goToLoginPage()"><b>Login</b></button>
+                <button class="subscribe-button" onclick="goToSubscribePage()"><b>Subscribe</b></button>
               </div>
         </header>
         
     <h1>Image Restoration</h1>
     <p>Choose an algorithm for image restoration:</p>
-    
-    <form action="restoration_process.html" method="post" enctype="multipart/form-data">
-        <input type="hidden" name="algorithm" value="{{ request.args['algorithm'] }}">
-        <input type="file" name="image">
-        <br>
-        <input type="submit" value="Upload Image">
-    </form>
+
+    <form id="uploadForm">
+      <label for="imageInput">Choose an Image:</label>
+      <div class="input-wrapper">
+          <input type="file" id="imageInput" class="file-input" name="image" accept="image/*" required>
+          <label for="imageInput" class="choose-file-button">Choose Image</label>
+          <input type="submit" value="Upload Image">
+      </div>    
+  </form>
+
+  <form id="uploadForm">
+    <label for="algorithmSelect">Choose Restoration Algorithm:</label>
+            <select id="algorithmSelect" name="algorithm">
+                <option value="algorithm1">Denoising Autoencoders</option>
+                <option value="algorithm2">Convolutional Neural Networks (CNNs)</option>
+                <option value="algorithm3">Super-Resolution Convolutional Neural Networks (SRCNN)</option>
+                <option value="algorithm4">Generative Adversarial Networks (GANs)</option>
+                <option value="algorithm5">Bilateral Filters</option>
+                <option value="algorithm6">Non-Local Means Denoising</option>
+                <option value="algorithm7">Total Variation (TV) Regularization</option>
+                <option value="algorithm8"> BM3D (Block-Matching and 3D Filtering)</option>
+                <option value="algorithm9">Wavelet Transforms</option>
+                <option value="algorithm10">Singular Value Decomposition (SVD)</option>
+                <option value="algorithm11">Dictionary Learning</option>
+                <option value="algorithm12">Non-Local Inpainting</option>
+                <option value="algorithm13">Deep Image Prior (DIP)</option>
+                <option value="algorithm14">Low-Rank Matrix Recovery</option>
+                <!-- Add more algorithm options as needed -->
+            </select>
+    <input type="button" value="Restore Image" onclick="restoreImage()">
+  </form>
+     
+    <img src="./svnth-removebg-preview.png">
 </body>
 </html>
