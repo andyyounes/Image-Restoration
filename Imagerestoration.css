@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=YourExtraLightFont&display=swap');
+
 /* Reset default margin and padding for all elements */
 * {
     margin: 0;
@@ -9,20 +12,20 @@
 body {
     background-color: #eeeeee; /* Light Gray */
     font-family: "Poppins", sans-serif;
-    margin: 0;
-    padding: 0;
-    margin-left:50px;
-    margin-right:50px;
-    width: 100vw;
+    margin-left: 50px;
+    margin-right: 50px;
+    align-items: center; 
+    transition: background-color  ease;
+    /* transition: background-color 0.5s ease; */
     /* display: flex;
     flex-direction:column;
     align-items: center; */
 }
-
-/* Style the header and navigation menu */
-header {
-    padding: 10px 0;
+.dark-mode body{
+    color: white;
 }
+/* Style the header and navigation menu */
+
 
 nav ul {
     list-style: none;
@@ -37,20 +40,20 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: hsl(290, 59%, 66%); /* Dark Gray */
-    font-weight: bold;
+    font-weight: 100;
 }
 
 /* Style the content container */
 .container {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 80%;
+    margin: auto;
     padding: 20px;
 }
 
 /* Style headings */
 h1, h2 {
     color: #333; /* Dark Gray */
-   text-align: left !important;
+    text-align: left !important;
 }
 
 /* Style paragraphs */
@@ -70,18 +73,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Additional Colors */
-.light-pink {
-    background-color: #FFC0CB; /* Light Pink */
-}
-
-.light-yellow {
-    background-color: #FFFFE0; /* Light Yellow */
-}
-
-.light-gray {
-    background-color: #D3D3D3; /* Light Gray */
-}
 .try-it-out-button {
     text-align: center;
     margin: 20px 0;
@@ -134,3 +125,524 @@ a:hover {
     margin-top: 10px;
 }
 
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    background: transparent;
+}
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.login-button{
+    display: flex;
+    justify-content:space-around;
+    padding: 3px 10px;
+    border: 2px solid rgb(75, 210, 75);
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-weight: bold;
+    text-decoration:solid ;
+    font-family: "Poppins", sans-serif;
+}
+.login-button:hover {
+    background-color: rgb(132, 243, 113); /* Darker green on hover */
+    border-color: transparent;
+    color: white;
+}
+.subscribe-button{
+    display: flex;
+    justify-content:space-around;
+    Background-color: rgb(75, 210, 75);
+    color: white;
+    border:2px solid rgb(75, 210, 75);
+    padding:5px 10px;
+    border-color: transparent;
+    margin-right: 20px;
+    cursor: pointer;
+    border-radius:5px;
+    font-weight: bold;
+    
+    /* background: linear-gradient(180deg, rgb(121, 220, 67) 0%, rgba(87,136,30,1) 100%); */
+}
+.subscribe-button:hover{
+    background-color:rgb(132, 243, 113);
+    border: 2px solid rgb(132, 243, 113);
+    color:black;
+}
+.dark-mode .login-button{
+    background-color: rgb(132, 243, 113) !important;
+    border-color: transparent;
+    color:black;
+    transition: background-color 0.5s ease;
+
+}
+.dark-mode .login-button:hover{
+    background-color:rgb(75, 210, 75) ;
+    border-color:transparent;
+    color: white;
+}
+.dark-mode .header-left{
+    background-color: transparent;
+    border-color:transparent;
+    color: white;
+}
+.dark-mode .centered-h1{
+    color: rgb(75, 210, 75);
+}
+.dark-mode .centered-h2{
+    color: white;
+}
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3{
+    color:white;
+}
+.dark-mode {
+    background-color: #2b2b2b;
+    color: #ffffff;
+}
+.night-mode-button{
+    padding-top:5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+.moon-icon {
+    width: 25px; /* Adjust the size as needed */
+    height:25px; /* Adjust the size as needed */
+    transition: transform 0.5s ease;
+    background-color: transparent;
+}
+.dark-mode .moon-icon {
+    transform: rotate(180deg);
+    background-color: rgb(188, 255, 156);
+    border-radius: 360px;
+    border:transparent;
+    /* padding:3px; */
+    width: 30px;
+    height:30px;
+}
+
+
+.header-logoim{
+    margin-left: 10px;
+    border-radius: 50%;
+    display:flex;
+    justify-content: flex-start;
+    margin: 0;
+    width: 30px;
+    height:30px;
+    position:absolute;
+    top:10px;
+    left:40px;
+    z-index: 2;
+    transition: all 150ms ease-out;
+    transition-delay: 500ms;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+.centered-h1{
+    font-size:60px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 0.5em;
+    color:  rgb(75, 210, 75);
+}
+.centered-h2{
+    text-align: center;
+    font-weight: 200;
+
+}
+.centered-span {
+    display: block;
+    text-align: center;
+    margin-top: 0.5em;
+}
+h1{
+    display:block;
+    font-size: 3em;
+    font-weight:600;
+}
+h2{
+    display: block;
+    font-size: 2em;
+    font-size: lighter;
+}
+input[type="file"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+}
+
+input[type="submit"] {
+    background-color: rgb(75, 210, 75);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+.submit-send{
+    background-color: rgb(75, 210, 75);
+    color: white;
+    padding: 10px 15px;
+    border-color: transparent;
+    border-radius: 4px;
+    font-weight: bold;
+}
+.submit-send:hover{
+    background-color: rgb(90, 230, 90);
+}
+input[type="submit"]:hover {
+    background-color: #45a049;
+
+}
+.input-wrapper {
+    display:flex;
+    align-items: center;
+}
+
+.file-input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.choose-file-button {
+    display: inline-block;
+    background-color: #4ce151;
+    color: white;
+    padding: 7px 20px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.choose-file-button:hover {
+    background-color: #45a049;
+}
+.contact-container,
+.about-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.contact-info,
+.contact-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0;
+}
+
+input,
+textarea {
+    padding: 10px;
+    margin: 5px 0;
+}
+
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+.about-content,
+.about-image {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-image img {
+    max-width: 100%;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    text-align: left;
+}
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color:transparent;
+    color: rgb(12, 12, 12);
+    padding: 10px 15px;
+    margin-right: 15px;
+    border: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.dark-mode .openbtn{
+    color:white;
+}
+.transparent{
+    opacity:0;
+}
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+    background-color: transparent;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+  
+  .change .openbtn {
+    background-color: #111;
+    z-index: 1;
+  }
+  
+.change .openbtn::after {
+    content: "❌";
+    margin-left: 5px;
+}
+
+/* For the Subscription Page */
+.subscription-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 80vh;
+}
+.row-containers{
+    display: flex;
+    flex-direction: row;
+}
+.subscription-container1,
+.subscription-container2 {
+    display: flex;
+    flex-direction: row;
+    background-color:#3d3c3c;
+    color:white;
+    max-width: 400px;
+    max-height: 400px;
+    background-color: none;
+    padding: 20px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+/* .dark-mode .subscription-container1,
+.dark-mode .subscription-container2{
+   
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} */
+.subscription-container1 .subscription-plan,
+.subscription-container2 .subscription-plan {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.subscription-plan h3{
+    text-align: center;
+}
+.subscribe-button1 {
+    display:inline-flex;
+    padding: 10px 10px;
+    font-size: 16px;
+    text-decoration: none;
+    justify-content:space-around;
+    Background-color: rgb(75, 210, 75);
+    color: white;
+    border-color: transparent;
+    cursor: pointer;
+    border-radius:5px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left:50px;
+    margin-right:50px;
+}
+.atr1{
+    color:white;
+}
+.subscribe-button1:hover {
+    Background-color: rgb(75, 210, 75); ;
+    color: black;
+}
+
+/* Login and Sign up */
+.container3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.container3 h1{
+    text-align:center;
+}
+.container3 p{
+    text-align: center;
+}
+.container3 .signup-container,
+.container3 .login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: none;
+    box-shadow: none;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+}
+.container3 label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.container3 .login-container label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.container3 input {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.container3 .login-container input {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.container3 form {
+    background-color:none;
+    border-radius: 5px;
+    border-color: none;
+    box-shadow: none;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.container3 input[type="submit"] {
+    background-color: rgb(75, 210, 75);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left:0;
+    transition: background-color 0.3s ease; 
+}
+
+.container3 input[type="submit"]:hover {
+    background-color: rgb(62, 237, 62);
+    max-width: 100%;
+}
+
+.dark-mode .attr2{
+    color:rgba(255, 255, 255, 0.526);
+}
+.dark-mode .contact-container{
+    color:black;
+}
+.dark-mode .h2-d{
+    color:#111;
+}
+.dark-mode .about-container{
+    color:#111;
+
+}
+
+#preview {
+    max-width: 100%;
+    max-height: 200px;
+    margin-top: 10px;
+    display: none; 
+}
