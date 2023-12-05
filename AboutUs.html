@@ -4,13 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="ImageRestoration.css">
-    <link rel="stylesheet" href="toggle.css">
-    <title>Contact Us</title>
-    <link rel="stylesheet" type="text/css" href="contact-us.css">
-    <link rel="stylesheet" href="about-us.css">
+    <title>About us</title>
     <script src="toggle.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Quicksand:wght@300&display=swap" rel="stylesheet">
 </head>
 
 
@@ -19,22 +16,30 @@
 
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a class="menu-item" href="LoginPage.html">Login</a>
+        <a class="menu-item" href="Main.html">Main</a>
         <a class="menu-item" href="Index.html">Home</a>
         <a class="menu-item" href="Restoration.html">Restoration</a>
         <a class="menu-item" href="ContactUs.html">Contact Us</a>
         <a class="menu-item" href="AboutUs.html">About Us</a>
       </div>
       
-      <div id="main">
+      <div id="main" class="header-left">
         <button class="openbtn" onclick="toggleNav()">☰</button> 
+        <img src="./scnd-removebg-preview.png" alt="logo" class="header-logoim" id="logo">
+    </div>
+      <div class="header-right">
+        <button onclick="switchMode()" class="night-mode-button">
+            <img id="moonIcon" src="./[removal.ai]_bcf90bd8-63d7-49dc-8ef8-52aaf482491f_night2.png" alt="Moon Icon" class="moon-icon">
+        </button>
+        <button class="login-button" onclick="goToLoginPage()"><b>Login</b></button>
+        <button class="subscribe-button" onclick="goToSubscribePage()"><b>Subscribe</b></button>
       </div>
     </div>
 </header>
 
 <div class="about-container">
     <div class="about-content">
-        <h2>Our Story</h2>
+        <h2 class="h2-d">Our Story</h2>
         <p>
             Welcome to our website! We are a passionate team dedicated to providing high-quality products and services.
         </p>
@@ -44,7 +49,7 @@
         <p>
             As a team, we constantly strive to improve and deliver the best solutions to our customers. We believe in the power of creativity, teamwork, and customer-centricity.
         </p>
-        <h2>How We Worked It Out</h2>
+        <h2 class="h2-d">How We Worked It Out</h2>
             <p>
                 Working together as a team, we faced numerous challenges and learned valuable lessons along the way. Our commitment to our vision and our customers has been unwavering.
             </p>
