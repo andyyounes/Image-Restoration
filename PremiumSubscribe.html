@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Main Page</title>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+    <link rel="stylesheet" href="ImageRestoration.css">
+    <script src="toggle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <script src="server.js"></script>
+  </head>
+
+<body>
+
+  <header>
+      <div id="mySidebar" class="sidebar" >
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+          <a href="menu-item" href="Main.html">Main</a>
+          <a class="menu-item" href="Index.html">Home</a>
+          <a class="menu-item" href="Restoration.html">Restoration</a>
+          <a class="menu-item" href="ContactUs.html">Contact Us</a>
+          <a class="menu-item" href="AboutUs.html">About Us</a>
+        </div>
+        
+        <div id="main" class="header-left">
+          <button class="openbtn" onclick="toggleNav()">☰</button> 
+          <img src="./scnd-removebg-preview.png" alt="logo" class="header-logoim" id="logo">
+        </div>
+        <div class="header-right">
+          <button onclick="switchMode()" class="night-mode-button">
+            <img id="moonIcon" src="./[removal.ai]_bcf90bd8-63d7-49dc-8ef8-52aaf482491f_night2.png" alt="Moon Icon" class="moon-icon">
+        </button>
+          <button class="login-button" onclick="goToLoginPage()">Login</button>
+          <button class="subscribe-button" onclick="goToSubscribePage()">Subscribe</button>
+        </div>
+  </header>
+  <div class="subscribe-container">
+    <h2>Premium Subscription</h2>
+    <p>Subscribe to receive updates on new image restoration algorithms.</p>
+    <form id="subscribeForm" action="#" method="post">
+        <input type="email" id="emailInput" name="email" placeholder="Your email" required>
+        <br>
+        <label for="premiumCheckbox">Premium Subscription</label>
+        <input type="checkbox" id="premiumCheckbox" name="premium" value="true">
+        <br>
+        <button type="button" id="subscribe-button" onclick="processSubscription()" class="subscribe-button">Subscribe</button>
+    </form>
+  </div>
+
+
+</body>
